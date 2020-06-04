@@ -4,12 +4,18 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
 
-function questions(){
-return inquirer.prompt([
+function questions() {
+    return inquirer.prompt([
         {
             type: "input",
             name: "username",
             message: "Enter your GitHub username",
+        },
+
+        {
+            type: "input",
+            name: "email",
+            message: "Enter your contact email",
         },
 
         {
@@ -81,20 +87,32 @@ return inquirer.prompt([
 
 
 questions()
-    .then(function({ username, title, description, installation, usage, tech, license, tests, contributing, launch, sources }){
+    .then(function (answer) {
         //queryURL using username
-        const queryURL = `https://api.github.com/users/${username}`
+        const queryURL = `https://api.github.com/users/${answer.username}`
 
         //axios get call for profile photo and email
         axios
             .get(queryURL)
-            .then(function(res) {
+            .then(function (res) {
+
+                const profilePicture = res.data.avatar_url
+
+                const readMe = 
+                `
                 
+
+                ### Questions
+                If you have any questions, contact me here: ${answer.email}
+                ${profilePicture}
+                `
+
+                fs.writeFile("README.md", readMe);
+
             })
-        //const readMe = generateREADME({ username, title, description, installation, usage, tech, license, tests, contributing, launch, sources })
-        //return fs.writeFile("README.md", readMe);
-    }).then(function(){
+
+    }).then(function () {
         //console.log successful writing of file
-    }).catch(function(err){
+    }).catch(function (err) {
         //if (err) => throw err
     })

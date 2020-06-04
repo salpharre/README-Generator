@@ -83,7 +83,14 @@ return inquirer.prompt([
 questions()
     .then(function({ username, title, description, installation, usage, tech, license, tests, contributing, launch, sources }){
         //queryURL using username
+        const queryURL = `https://api.github.com/users/${username}`
+
         //axios get call for profile photo and email
+        axios
+            .get(queryURL)
+            .then(function(res) {
+                
+            })
         //const readMe = generateREADME({ username, title, description, installation, usage, tech, license, tests, contributing, launch, sources })
         //return fs.writeFile("README.md", readMe);
     }).then(function(){

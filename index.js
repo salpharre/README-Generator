@@ -7,7 +7,63 @@ const axios = require("axios");
 function questions(){
 return inquirer.prompt([
         {
-            
+            type: "input",
+            name: "username",
+            message: "Enter your GitHub username",
+        },
+
+        {
+            type: "input",
+            name: "title",
+            message: "Give your Project a title",
+        },
+
+        {
+            type: "input",
+            name: "description",
+            message: "",
+        },
+
+        {
+            type: "input",
+            name: "installation",
+            message: "",
+        },
+
+        {
+            type: "input",
+            name: "usage",
+            message: "",
+        },
+
+        {
+            type: "input",
+            name: "tech",
+            message: "",
+        },
+
+        {
+            type: "input",
+            name: "license",
+            message: "",
+        },
+
+        {
+            type: "input",
+            name: "tests",
+            message: "",
+        },
+
+        {
+            type: "input",
+            name: "contributing",
+            message: "",
+        },
+
+        {
+            type: "input",
+            name: "launch",
+            message: "",
         },
     ])
 };

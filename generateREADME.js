@@ -1,4 +1,4 @@
-function generateREADME({ username, /*list other key values for name key in same order as questions*/ }){
+function generateREADME({ username, title, description, installation, usage, tech, license, tests, contributing, launch }){
     return 
     `
     

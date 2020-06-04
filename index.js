@@ -70,10 +70,10 @@ return inquirer.prompt([
 
 
 questions()
-    .then(function({ username, /*list other key values for name key in same order as questions*/ }){
+    .then(function({ username, title, description, installation, usage, tech, license, tests, contributing, launch }){
         //queryURL using username
         //axios get call for profile photo and email
-        //const readMe = generateREADME({ username, /*list other key values for name key in same order as questions*/ })
+        //const readMe = generateREADME({ username, title, description, installation, usage, tech, license, tests, contributing, launch })
         //return fs.writeFile("README.md", readMe);
     }).then(function(){
         //console.log successful writing of file

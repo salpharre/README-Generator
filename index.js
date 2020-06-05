@@ -39,13 +39,7 @@ function questions() {
         {
             type: "input",
             name: "usage",
-            message: "How is the user to use your application?",
-        },
-
-        {
-            type: "input",
-            name: "tech",
-            message: "What technologies and libraries were used?",
+            message: "How is the user to use your application? (be as detailed as possible)",
         },
 
         {
@@ -74,19 +68,12 @@ function questions() {
             name: "launch",
             message: "Date your application releases",
         },
-
-        {
-            type: "input",
-            name: "sources",
-            message: "List any outside resources",
-            default: "No outside resources used"
-        },
     ])
 };
 
 
 questions()
-    .then(function ({ username, email, title, description, installation, usage, tech, license, tests, contributing, launch, sources }) {
+    .then(function ({ username, email, title, description, installation, usage, license, tests, contributing, launch }) {
         //queryURL using username
         const queryURL = `https://api.github.com/users/${username}`
 
@@ -107,7 +94,39 @@ questions()
 
                 ## Table of Contents
                 * [Installation](#installation)
-                * 
+                * [Usage](#usage)
+                * [Tests](#tests)
+                * [Contributors](#contributors)
+                * [License](#license)
+                * [Launch](#launch)
+                * [Questions](#questions)
+                
+                ### Installation
+
+                Enter the following to install:
+                \`${installation}\`
+
+                ### Usage
+
+                ${usage}
+
+                ### Tests
+
+                Enter the following for a test:
+
+                \`${tests}\`
+
+                ### Contributors
+
+                ${contributing}
+
+                ### License
+
+                ${license}
+
+                ### Launch
+
+                ${launch}
 
                 ### Questions
                 If you have any questions, contact me here: ${email}

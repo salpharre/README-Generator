@@ -1,8 +1,9 @@
-//
+//methods required for module to work
 const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
 
+//function that returns the prompt method for inquirer, questions for the user are shown in the terminal once node index is entered
 function questions() {
     return inquirer.prompt([
         {
@@ -71,7 +72,11 @@ function questions() {
     ])
 };
 
-
+/*function for prompt is called and a then method is chained to pass the objects from prompt through. 
+username is used to create the url to call axios. The response from axios is used to store the profile 
+photo to be used later in variable readMe, that creates the README file using github markdown. The objects passed into
+the .then function are used to insert into the generated README file in the variable readMe where appropriate.
+*/
 questions()
     .then(function ({ username, email, title, description, installation, usage, license, tests, contributing, launch }) {
         //queryURL using username
@@ -81,9 +86,9 @@ questions()
         axios
             .get(queryURL)
             .then(function (res) {
-
+                //holds the response for profile photo
                 const profilePicture = res.data.avatar_url
-
+                //holds README markdown
                 const readMe = 
                 `
 # ${title}
@@ -135,7 +140,7 @@ If you have any questions, contact me here: ${email}
 ![profile photo](${profilePicture})
 
 `
-
+/*creates README file from variable readMe into file system. Errors are checked and if it's successful, a message is logged*/
         fs.writeFile("README.md", readMe, function(err){
             if (err) {
                 throw err;

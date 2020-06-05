@@ -45,8 +45,7 @@ function questions() {
         {
             type: "input",
             name: "license",
-            message: "List the license you used (if you have one)",
-            default: "No license"
+            message: "List your license",
         },
 
         {
@@ -88,7 +87,7 @@ questions()
                 `
 # ${title}
 
-[![Made-With-Node](https://img.shields.io/badge/Made%20With-Node-green)]
+![Made-With-Node](https://img.shields.io/badge/Made%20With-Node-green)
 
 ${description}
 
@@ -112,7 +111,7 @@ ${usage}
 
 ### Tests
 
-Enter the following for a test:
+Enter the following to test:
 
 \`${tests}\`
 
@@ -126,21 +125,21 @@ ${license}
 
 ### Launch
 
-${launch}
+Date application releases: \`${launch}\`
 
 ### Questions
 If you have any questions, contact me here: ${email}
 ${profilePicture}
 
-                `
+`
 
-                fs.writeFile("README.md", readMe, function(err){
-                    if (err) {
-                        throw err;
-                    }
+        fs.writeFile("README.md", readMe, function(err){
+            if (err) {
+                throw err;
+            }
 
-                    console.log("ReadMe was successfully created!")
-                });
+            console.log("ReadMe was successfully created!")
+        });
 
-            });
     });
+});

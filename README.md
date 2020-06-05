@@ -1,9 +1,9 @@
 
-# 
+# Readme Generator
 
-[![Made-With-Node](https://img.shields.io/badge/Made%20With-Node-green)]
+![Made-With-Node](https://img.shields.io/badge/Made%20With-Node-green)
 
-
+This project is a CLI application, it was built in VS Code using Node. It generates a ReadMe.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -25,24 +25,23 @@ Enter the following to install:
 
 ### Tests
 
-Enter the following for a test:
+Enter the following to test:
 
 `No tests needed`
 
 ### Contributors
 
-None
+Sandra Arredondo
 
 ### License
 
-No license
+
 
 ### Launch
 
-
+Date application releases: `June 4th, 2020`
 
 ### Questions
-If you have any questions, contact me here: 
-https://avatars3.githubusercontent.com/u/61606574?v=4
+If you have any questions, contact me here: sandra.alpha2010@gmail.com
+![profile photo](https://avatars3.githubusercontent.com/u/61606574?v=4)
 
-                

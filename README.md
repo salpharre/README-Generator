@@ -3,33 +3,25 @@
 
 ![Made-With-Node](https://img.shields.io/badge/Made%20With-Node-green)
 
-This project is a CLI application, it was built in VS Code using Node. It generates a ReadMe.
+Is a CLI application that generates Readme files.
 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [Technology](#technology)
 * [Tests](#tests)
 * [Contributors](#contributors)
 * [License](#license)
 * [Launch](#launch)
-* [Sources](#sources)
+* [Questions](#questions)
 
 ### Installation
-
-Package.json already exists within repository but node_modules is needed 
 
 Enter the following to install:
 `npm install or npm i`
 
 ### Usage
 
-
-### Technology
-
-* 
-* 
-* 
+After installing it, run the application in your terminal by typing in `node index` and follow the prompts.
 
 ### Tests
 
@@ -47,10 +39,11 @@ None
 
 ### Launch
 
-Date application releases: `June 4th, 2020`
+Date application releases: `June 5th, 2020`
 
-### Sources
+### Questions
 
-* 
+If you have any questions, contact me here: sandra.alpha2010@gmail.com
 
+![profile photo](https://avatars3.githubusercontent.com/u/61606574?v=4)
 

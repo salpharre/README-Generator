@@ -1,5 +1,4 @@
-const generateReadme = require("generateREADME.js");
-
+//
 const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
@@ -87,9 +86,9 @@ function questions() {
 
 
 questions()
-    .then(function (answer) {
+    .then(function ({ username, email, title, description, installation, usage, tech, license, tests, contributing, launch, sources }) {
         //queryURL using username
-        const queryURL = `https://api.github.com/users/${answer.username}`
+        const queryURL = `https://api.github.com/users/${username}`
 
         //axios get call for profile photo and email
         axios
@@ -100,19 +99,28 @@ questions()
 
                 const readMe = 
                 `
-                
+                # ${title}
+
+                [![Made-With-Node](https://img.shields.io/badge/Made%20With-Node-green)]
+
+                ${description}
+
+                ## Table of Contents
+                * [Installation](#installation)
+                * 
 
                 ### Questions
-                If you have any questions, contact me here: ${answer.email}
+                If you have any questions, contact me here: ${email}
                 ${profilePicture}
                 `
 
-                fs.writeFile("README.md", readMe);
+                fs.writeFile("README.md", readMe, function(err){
+                    if (err) {
+                        throw err;
+                    }
 
-            })
+                    console.log("ReadMe was successfully created!")
+                });
 
-    }).then(function () {
-        //console.log successful writing of file
-    }).catch(function (err) {
-        //if (err) => throw err
-    })
+            });
+    });

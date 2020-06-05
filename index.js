@@ -86,51 +86,52 @@ questions()
 
                 const readMe = 
                 `
-                # ${title}
+# ${title}
 
-                [![Made-With-Node](https://img.shields.io/badge/Made%20With-Node-green)]
+[![Made-With-Node](https://img.shields.io/badge/Made%20With-Node-green)]
 
-                ${description}
+${description}
 
-                ## Table of Contents
-                * [Installation](#installation)
-                * [Usage](#usage)
-                * [Tests](#tests)
-                * [Contributors](#contributors)
-                * [License](#license)
-                * [Launch](#launch)
-                * [Questions](#questions)
-                
-                ### Installation
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Tests](#tests)
+* [Contributors](#contributors)
+* [License](#license)
+* [Launch](#launch)
+* [Questions](#questions)
 
-                Enter the following to install:
-                \`${installation}\`
+### Installation
 
-                ### Usage
+Enter the following to install:
+\`${installation}\`
 
-                ${usage}
+### Usage
 
-                ### Tests
+${usage}
 
-                Enter the following for a test:
+### Tests
 
-                \`${tests}\`
+Enter the following for a test:
 
-                ### Contributors
+\`${tests}\`
 
-                ${contributing}
+### Contributors
 
-                ### License
+${contributing}
 
-                ${license}
+### License
 
-                ### Launch
+${license}
 
-                ${launch}
+### Launch
 
-                ### Questions
-                If you have any questions, contact me here: ${email}
-                ${profilePicture}
+${launch}
+
+### Questions
+If you have any questions, contact me here: ${email}
+${profilePicture}
+
                 `
 
                 fs.writeFile("README.md", readMe, function(err){

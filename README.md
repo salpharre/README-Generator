@@ -8,20 +8,28 @@ This project is a CLI application, it was built in VS Code using Node. It genera
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
+* [Technology](#technology)
 * [Tests](#tests)
 * [Contributors](#contributors)
 * [License](#license)
 * [Launch](#launch)
-* [Questions](#questions)
+* [Sources](#sources)
 
 ### Installation
 
+Package.json already exists within repository but node_modules is needed 
+
 Enter the following to install:
-`No installation needed`
+`npm install or npm i`
 
 ### Usage
 
 
+### Technology
+
+* 
+* 
+* 
 
 ### Tests
 
@@ -35,13 +43,14 @@ Sandra Arredondo
 
 ### License
 
-
+None
 
 ### Launch
 
 Date application releases: `June 4th, 2020`
 
-### Questions
-If you have any questions, contact me here: sandra.alpha2010@gmail.com
-![profile photo](https://avatars3.githubusercontent.com/u/61606574?v=4)
+### Sources
+
+* 
+
 

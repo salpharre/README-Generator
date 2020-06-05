@@ -46,6 +46,7 @@ function questions() {
             type: "input",
             name: "license",
             message: "List your license",
+            default: "None",
         },
 
         {
@@ -128,7 +129,9 @@ ${license}
 Date application releases: \`${launch}\`
 
 ### Questions
+
 If you have any questions, contact me here: ${email}
+
 ![profile photo](${profilePicture})
 
 `

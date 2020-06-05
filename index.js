@@ -129,7 +129,7 @@ Date application releases: \`${launch}\`
 
 ### Questions
 If you have any questions, contact me here: ${email}
-${profilePicture}
+![profile photo](${profilePicture})
 
 `
 
